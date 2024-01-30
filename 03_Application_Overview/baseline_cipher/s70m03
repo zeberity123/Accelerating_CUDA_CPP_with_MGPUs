@@ -1,0 +1,10 @@
+nvcc -arch=sm_70 -O3 -Xcompiler="-march=native -fopenmp" baseline.cu -o baseline -run
+TIMING: 219.381 ms (allocate memory)
+TIMING: 147.263 ms (encrypt data on CPU)
+TIMING: 48.3956 ms (copy data from CPU to GPU)
+TIMING: 70.5017 ms (decrypt data on GPU)
+TIMING: 42.8286 ms (copy data from GPU to CPU)
+TIMING: 161.8 ms (total time on GPU)
+STATUS: test passed
+TIMING: 21.6113 ms (checking result on CPU)
+TIMING: 76.4496 ms (free memory)
